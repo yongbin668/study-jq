@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>电子钟表 char At获得第几个</title>
+<script type="text/javascript">
+
+function toDouble (num)/*双倍字符自动添加，避免非六位问题*/
+{
+	if(num<10)	
+	{
+			return '0'+num;
+	}
+	else
+	{
+			return ''+num;
+	}
+}
+window.onload=function ()
+{
+		var oBtn=document.getElementById('btn1');
+		var aImg=document.getElementsByTagName('img');
+		var i=0;
+
+		/*oBtn.onclick=*/function updateTime()
+		{
+				var oDate=new Date();
+				//var arr=['2','1','5','5','3','2'];
+				var str=toDouble (oDate.getHours())+toDouble (oDate.getMinutes())+toDouble (oDate.getSeconds());
+				
+			//	alert (str);
+				for(i=0;i<aImg.length;i++)
+				{
+						aImg[i].src='img/'+str.charAt(i)+'.png';
+				} 
+		};
+		setInterval (updateTime,1000);
+		updateTime ();
+};
+</script>
+</head>
+<body style="color:#FFFF00;background:#9CF;font-size:50px;text-align:center;">
+<!--<input id="btn1" type="button" value="更新时间" />-->
+<img src="img/0.png" />
+<img src="img/0.png" />
+点
+<img src="img/0.png" />
+<img src="img/0.png" />
+分
+<img src="img/0.png" />
+<img src="img/0.png" />
+秒
+</body>
+</html>

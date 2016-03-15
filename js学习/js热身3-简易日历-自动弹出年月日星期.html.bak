@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>电子钟表 char At获得第几个</title>
+<script type="text/javascript">
+function toChinese(day)
+{
+		switch(day)/*判断*/
+		{
+				case 0;
+						return '星期日';
+				case 1;
+						return '星期一';
+				case 2;
+						return '星期二';
+				case 3;
+						return '星期三';
+				case 4;
+						return '星期四';
+				case 5;
+						return '星期五';
+				case 6;
+						return '星期六';
+		}
+}
+var oDate=new Date ();/*获取最新年月日星期几*/
+var str=oDate.getFullYear()+'年'+(oDate.getMonth()+1)+'月'+oDate.getDate()+'日'+toChinese(oDate.getDay());
+
+alert ('现在是： '+str);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

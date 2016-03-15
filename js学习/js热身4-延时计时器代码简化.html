@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>鼠标移出，用setTimeout延时</title>
+<style>
+#div1{width:200px;height:30px;background:red;}
+#div2{width:150px;height:20px;background:gray;
+margin:10px;display:none;}
+</style>
+<script type="text/javascript">
+window.onload=function ()
+{
+		var oDiv1=document.getElementById('div1');
+		var oDiv2=document.getElementById('div2');
+		var timer= null;
+
+		function show()
+		{
+				oDiv2.style.display='block';
+				clearTimeout (timer);
+		}
+		function hide()
+		{
+				timer=setTimeout (function (){
+						oDiv2.style.display='none';
+						},500); 
+		}
+
+		oDiv1.onmouseover=show;
+		oDiv1.onmouseout=hide;
+
+		oDiv2.onmouseover=show;
+		oDiv2.onmouseout=hide;
+};
+</script>
+</head>
+<body>
+<div id="div1">
+</div>
+<div id="div2">
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>收缩展开菜单</title>
+<style>
+#box{
+	width:150px;
+	height:150px;
+	text-align:center;
+	background:gray;
+	
+}
+p{
+	text-align:center;
+}
+a{
+	text-decoration:none;
+	display:block;
+	height:24px;
+	line-height:24px;
+	padding-left:30px;
+	float:left;
+	text-align:center;
+	color:#00C;	
+	display:block;
+}
+a:hover{
+	display:block;
+	background:yellow;
+}
+li{
+	list-style:none;
+}
+</style>
+<script type="text/javascript">
+		window.onload=function()
+		{
+			var oBtn=document.getElementById('btn');
+			var oUl=document.getElementById('ul1');
+
+			oBtn.onclick=function()
+			{
+				if(oUl.style.display=='block')
+				{
+					oUl.style.display='none';
+				}else
+				{
+					oUl.style.display='block';
+				}
+			};
+		};
+</script>
+</head>
+<body>
+<div id="box">
+		<p id="btn">输入法</p>
+		<ul id="ul1" style="display:block;">
+				<li><a href="#" alt="">手写</a></li>
+				<li><a href="#" alt="">拼音</a></li>
+				<li><a href="#" alt="">关闭</a></li>
+		</ul>
+</div>
+</body>
+</html>

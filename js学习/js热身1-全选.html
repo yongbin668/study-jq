@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>全选设定</title>
+<style>
+#btn{
+	display:block;
+	width:40px;
+	height:22px;
+	background:green;
+	text-align:centert;
+	padding-left:5px;
+}
+</style>
+<script type="text/javascript">
+window.onload=function()
+{
+	var oBtn=document.getElementById('btn');
+	var aInput=document.getElementsByTagName('input');
+	var i=0;
+	oBtn.onclick=function()
+	{		
+		for(i=0;i<aInput.length;i++)
+		{
+			aInput[i].checked=true;
+		}
+	};
+};
+</script>
+</head>
+<body>
+		<p id="btn">全选</p>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+		<input type="checkbox" /><br/>
+</body>
+</html>

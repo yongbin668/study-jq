@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>电子钟表</title>
+<script type="text/javascript">
+window.onload=function ()
+{
+		var oDate=new Date ();/*声明一个date对象，new表示新建一个新对象*/
+		var str=oDate.getHours()+'点'+oDate.getMinutes()
+		+'分'+oDate.getSeconds()+'秒';
+		
+		alert(str);
+};
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+<html>
+<head lang="en">
+<meta  charset="utf-8"/>
+    <title>DIV移动 offsetleft属性 </title>
+<style>
+#div1{width:100px;height:100px;background:#CCC;
+position:absolute;left:0;}
+</style>
+<script type="text/javascript">
+window.onload=function ()
+{
+		var oDiv=document.getElementById('div1');
+		var oBtn1=document.getElementById('btn1');
+		var oBtn2=document.getElementById('btn2');
+		var timer=null;
+
+		oBtn1.onclick=function ()
+		{
+				timer=setInterval(function (){
+						oDiv.style.left=oDiv.offsetLeft+5+'px';
+				},30);
+		};
+		oBtn2.onclick=function ()
+		{
+				clearInterval(timer);
+		};
+};
+</script>
+</head>
+<body>
+<input id="btn1" type="button" value="向右移动" />
+<input id="btn2" type="button" value="停止移动" />
+<div id="div1">
+</div>
+</body>
+</html>

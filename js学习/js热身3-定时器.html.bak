@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>定时器的制作 show() setInterval()</title>
+<script type="text/javascript">
+/*function show ()
+{
+		alert('a');
+}
+/*setInterval (show, 1000);/*第一个是函数名，第二个表示毫秒，不断地重复*/
+/*setTimeout (show, 1000); /*延时性定时器，只执行一次*/
+function show ()
+{
+		alert('a');
+}
+window.onload=function ()
+{
+		var oBtn1=document.getElementById('btn1');
+		var oBtn2=document.getElementById('btn2');
+		var timer=null;
+
+		oBtn1.onclick=function ()
+		{
+				timer=setInterval(show, 1000);
+		};
+		oBtn2.onclick=function ()
+		{
+				clearInterval(timer);
+		};
+};
+
+</script>
+</head>
+<body>
+<input id="btn1" type="button" value="开启定时器" />
+<input id="btn2" type="button" value="关闭定时器" />
+<body>
+</html>

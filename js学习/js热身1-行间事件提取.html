@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head >
+<style>
+#div1{
+		width:100px;
+		height:100px;
+		background:red;
+		}
+/*.box{
+		width:200px;
+		height:200px;
+		background:green;
+		}*/
+</style>
+<meta charset="UTF-8" />
+<title>window.onload行间事件提取</title>
+<script type="text/javascript">
+		/*window.onload:当页面加载完成的时候，他会完成一些事情*/
+		window.onload=function()
+		{
+			var oDiv=document.getElementById('div1');
+
+			oDiv.onmouseover=toGreen;
+			oDiv.onmouseout=toRed;
+		};
+		function toGreen()/*用function+名字来定义*/
+		{
+		 var oDiv1=document.getElementById('div1');
+
+		 oDiv1.style.height='200px';
+		 oDiv1.style.width='200px';
+		 oDiv1.style.background='green';
+		}
+		function toRed()
+		{
+		 var oDiv1=document.getElementById('div1');
+
+		 oDiv1.style.height='100px';
+		 oDiv1.style.width='100px';
+		 oDiv1.style.background='red';
+		}
+		
+</script>
+</head>
+<body>
+<div id="div1" >
+</div>
+</body>	
+</html>

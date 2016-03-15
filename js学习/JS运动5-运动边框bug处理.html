@@ -1,0 +1,33 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>offset存在包含padding和border尺寸的Bug</title>
+<style>
+#div1 {width:200px;height:200px;background:red;
+border:10px solid black;}
+</style>
+<script type="text/javascript">
+function getStyle(obj,name)	//获取行间元素属性
+{
+	if(obj.currentStyle)
+	{
+		return obj.currentStyle[name];
+	}
+	else
+	{
+		return getComputedStyle(obj,false)[name];
+	}
+}
+
+setInterval(function (){
+	var oDiv=document.getElementById('div1');
+
+	oDiv.style.width=parseInt(getStyle(oDiv,'width'))-3+'px';
+},30)
+</script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

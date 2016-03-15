@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title></title>
+<script type="text/javascript">
+var a=2;
+//alert (typeof a);		//number
+
+a='abc';
+//alert (typeof a);		//string
+
+a=true;
+//alert (typeof a);			//boolean		布尔
+
+/*window.onload=function ()
+{
+		var a=document.getElementById('div1');
+
+		alert (typeof a);		//object	对象
+};*/
+
+/*a=function ()
+{
+		alert ('abc');
+};
+
+alert (typeof a);		//function 函数，有自己的独立类型*/
+
+var b;
+alert (typeof b);		//undefined,未定义[1.真的未定义，2.虽然定义，但未赋值]
+
+var arr=[1,2,3,4];
+alert (typeof arr);	//object
+
+var oDate=new Date();
+alert (typeof oDate);
+</script>
+</head>
+<body>
+<div id="div1">		
+</div>
+
+</body>
+</html>
